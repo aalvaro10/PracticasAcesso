@@ -13,7 +13,7 @@ public class Ejercicio1 {
 		
 		try {
 			Class.forName("org.h2.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:h2:"+"./Database/AADU2"+"root"+"123");
+			Connection conn = DriverManager.getConnection("jdbc:h2:"+"./Database/AADU2"+"root"+"root123");
 			Statement st = conn.createStatement();
 			
 			st.execute("DROP TABLE IF EXISTS estudiantes");
