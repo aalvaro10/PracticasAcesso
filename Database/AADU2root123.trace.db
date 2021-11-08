@@ -1,0 +1,93 @@
+2021-11-08 09:10:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (ESTUDIANTES: ""ID"" MEDIUMINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"")"
+Data conversion error converting "'' (ESTUDIANTES: ""ID"" MEDIUMINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"")"; SQL statement:
+INSERT INTO estudiantes (id,nombre,apellido,modulo) VALUES ('','Alvaro','Gomez','Ciencias'),('','Raul','Martinez','Letras'),('','Adrian','Perez','Ciencias sociales'),('','Pepe','Gonzalez','Ciencias sociales'),('','Roberto','Garcia','Ciencias'); [22018-200]
+2021-11-08 09:11:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (ESTUDIANTES: ""ID"" MEDIUMINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"")"
+Data conversion error converting "'' (ESTUDIANTES: ""ID"" MEDIUMINT DEFAULT NEXT VALUE FOR ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"" NOT NULL NULL_TO_DEFAULT SEQUENCE ""PUBLIC"".""SYSTEM_SEQUENCE_242627B0_196F_4036_A111_6AB8CED390F1"")"; SQL statement:
+INSERT INTO estudiantes (id,nombre,apellido,modulo) VALUES ('','Alvaro','Gomez','Ciencias'),('','Raul','Martinez','Letras'),('','Adrian','Perez','Ciencias sociales'),('','Pepe','Gonzalez','Ciencias sociales'),('','Roberto','Garcia','Ciencias'); [22018-200]
+2021-11-08 09:30:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "PEDRO" no encontrada
+Column "PEDRO" not found; SQL statement:
+UPDATE estudiantes SET nombre = Pedro  WHERE id = 2;  [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Update.prepare(Update.java:275)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.aad.ejercicio1.Ejercicio1.main(Ejercicio1.java:50)
+2021-11-08 09:31:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "PEDRO" no encontrada
+Column "PEDRO" not found; SQL statement:
+UPDATE estudiantes SET Pedro = nombre  WHERE id = 2;  [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.aad.ejercicio1.Ejercicio1.main(Ejercicio1.java:50)
+2021-11-08 09:38:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "PEDRO" no encontrada
+Column "PEDRO" not found; SQL statement:
+UPDATE estudiantes SET nombre = Pedro  WHERE id = 2;  [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Update.prepare(Update.java:275)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.aad.ejercicio1.Ejercicio1.main(Ejercicio1.java:50)
+2021-11-08 09:47:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 09:48:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 09:49:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 09:49:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 09:51:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 09:51:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; se esperaba "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE ESTUDIANTES SET NOMBRE =' Pedro'  WHERE ID = ;[*] "; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE estudiantes SET nombre =' Pedro'  WHERE id = ;  [42001-200]
+2021-11-08 10:01:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-200]
