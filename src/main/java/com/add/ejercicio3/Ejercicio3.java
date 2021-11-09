@@ -27,24 +27,37 @@ public class Ejercicio3 {
 	    try {
 	            Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
 	            Statement st = conn.createStatement();
-		
-	
-			    
-			    FileReader reader =new FileReader("C:\\Users\\Familia\\Downloads\\usuarios.csv");
-			    
-				
-				st.PreparedStament("DROP TABLE IF EXISTS aadu2.usuarios");
-				st.execute("CREATE TABLE IF NOT EXISTS usuarios("
+	            
+	            st.execute("CREATE TABLE IF NOT EXISTS usuarios("
 						+ "id MEDIUMINT NOT NULL AUTO_INCREMENT,"
 						+ "nombre varchar(100),"
 						+ "apellido varchar(100),"
 						+ "mail varchar(100),"
 						+ "PRIMARY KEY (id));");
+		
+	
+			    
+			    BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Familia\\Downloads\\usuarios.csv"));
+			    
+			    String line= null;
+			    conn.setAutoCommit(false);
+			    
 				
-				 StringTokenizer separar = new StringTokenizer("");
+				PreparedStament insertar= conn.prepareStatement("INSERT INTO usuarios (nombre,apellido,mail) VALUES(?,?,?);");
+				while ((line = reader.readLine())!=null) {
+					StringTokenizer separar = new StringTokenizer(line, " ");
+					insertar.setString(1, separar.nextToken());
+					insertar.setString(2, separar.nextToken());
+					insertar.setString(3, separar.nextToken());
+					insertar.executeUpdate();
+					
 
-			        while (separar.hasMoreTokens()) { 
-			        	System.out.println(separar.nextToken());   }
+				}
+				
+				
+				 
+			        //while (separar.hasMoreTokens()) { 
+			        	//System.out.println(separar.nextToken());   }
 		 }
 		 catch (Exception e) {
 			 e.printStackTrace();
