@@ -34,6 +34,9 @@ public class Ejercicio1 {
 			
 			ResultSet rs = st.executeQuery("SELECT * FROM estudiantes");
 			
+			System.out.println("-----------------------------------");
+			System.out.println("TE MUESTRO EL CONTENIDO DE LA TABLA");
+			System.out.println("-----------------------------------");
 
 			int i=1;
 		      while (rs.next()) {
@@ -44,8 +47,9 @@ public class Ejercicio1 {
 		        System.out.println("modulo: " + rs.getString("modulo"));
 		        System.out.println("");
 		      }
-		      
+		      System.out.println("------------------------------------------------");
 		      System.out.println("VAMOS A MODIFICAR ALGUNOS DATOS EN LAS TABLAS!!!");
+		      System.out.println("------------------------------------------------");
 		      System.out.println("");
 		      st.executeUpdate("UPDATE estudiantes SET nombre ='Pedro'  WHERE id =2; ");
 		      st.executeUpdate("UPDATE estudiantes SET apellido ='Rodriguez'  WHERE id =1; ");
@@ -65,8 +69,10 @@ public class Ejercicio1 {
 			        System.out.println("");
 			      }
 			      
+			      System.out.println("---------------------------");
 			      System.out.println("VAMOS A BORRAR UNA TABLA!!!");
-			      System.out.println("");
+			      System.out.println("---------------------------");
+			     
 			      st.executeUpdate("DELETE estudiantes WHERE id = 4;");
 			      st.executeUpdate("UPDATE estudiantes SET id ='4'  WHERE id =5; ");
 			      
