@@ -76,7 +76,7 @@ public class EstudianteDAO implements InterEstudianteDAO {
 
 	@Override
 	public List<Estudiante> findAll() {
-		List<Estudiante> listaEstudiantes= new ArrayList<Estudiante>();
+		List<Estudiante> estudiantes= new ArrayList<Estudiante>();
 		try {
 			Connection conn=Conexion.conectar();
 			Statement stm=conn.createStatement();
@@ -87,7 +87,7 @@ public class EstudianteDAO implements InterEstudianteDAO {
 				estudiante.setNombre(rs.getString("nombre"));
 				estudiante.setApellidos(rs.getString("apellido"));
 				estudiante.setModulo(rs.getString("modulo"));
-				listaEstudiantes.add(estudiante);
+				estudiantes.add(estudiante);
 			}
 			stm.close();
 			rs.close();
@@ -96,7 +96,7 @@ public class EstudianteDAO implements InterEstudianteDAO {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}	
-		return listaEstudiantes;
+		return estudiantes;
 	}
 
 	@Override

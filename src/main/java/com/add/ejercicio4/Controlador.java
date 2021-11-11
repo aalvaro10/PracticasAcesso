@@ -50,7 +50,6 @@ private Vista vista= new Vista();
 			InterEstudianteDAO dao= new  EstudianteDAO();
 			dao.removeAll();
 		}
-		
-		//vita.verEstudainte read,
-		//visat.verEstudaintes(estudiantes) find byname, findall
+
+
 }
