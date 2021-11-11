@@ -4,25 +4,25 @@ public class PatronDAOEjercicio2 {
 	
 	public static void main(String[] args) {
 
-		Estudiante estudiante = new Estudiante("1", "Elivar", "Largo", "DAW");			
+		Estudiante estudiante = new Estudiante("1", "Elivar");			
 		
 		// controlador
-		Controlador controller = new Controlador();
+		Controlador contolador = new Controlador();
  
 		// guarda un cliente a través del controlador
-		controller.registrar(estudiante);
+		contolador.insert(estudiante);
  
 		// ver clientes
-		controller.verClientes();
+		contolador.verEstudiantes();
  
 		// editar un cliente por medio del id
 		estudiante.setId(1);
 		estudiante.setNombre("Santiago");
-		controller.actualizar(estudiante);
+		contolador.actualizar(estudiante);
  
 		// eliminar un cliente por medio del id
 		estudiante.setId(1);
-		controller.eliminar(estudiante);
+		contolador.eliminar(estudiante);
 		
 			
 
