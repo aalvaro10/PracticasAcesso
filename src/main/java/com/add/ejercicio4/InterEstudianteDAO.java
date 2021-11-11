@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface InterEstudianteDAO {
 	
-	public void insert(Object t);
-	public boolean update(Object t);
+	public void insert(Estudiante estudiante);
+	public boolean update(Estudiante estudiante);
 	public boolean deleteById(Integer id);
-	public Object read(Integer id); 
-	public List<Object> findAll();
-	public List<Object> findByName(String name);
+	public Estudiante read(Integer id); 
+	public List<Estudiante> findAll();
+	public List<Estudiante> findByName(String name);
 	public boolean removeAll();
 
 } 
