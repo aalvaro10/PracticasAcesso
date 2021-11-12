@@ -61,7 +61,7 @@ public class Estudiante {
 	}
 	@Override
 	public String toString() {
-		return this.id+", "+this.nombre+", "+this.apellidos+", "+this.modulo;
+		return "ID:"+this.id+", "+"NOMBRE: "+this.nombre+", "+"APELLIDO: "+this.apellidos+", "+"MOUDLO: "+this.modulo;
 	
 	
 	}

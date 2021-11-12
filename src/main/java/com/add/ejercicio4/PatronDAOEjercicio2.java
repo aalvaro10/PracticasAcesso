@@ -41,34 +41,29 @@ public class PatronDAOEjercicio2 {
 			est.insert(estudiante3);
 			est.insert(estudiante4);
 			
-			System.out.println("");
+			
 			System.out.println("Estos son los estudiantes");
 			est.findAll();
 			
 			System.out.println("");
-			estudiante2.setModulo("DAW");
+			estudiante2.setModulo("DAM");
 			est.update(estudiante2);
-			System.out.println("Modificacion hecha");
-			
-			System.out.println("");
-			System.out.println("Muestra el estrudiante por su nombre");
+			System.out.println("Modificacion de Javier hecha");
 			est.findByName("Javier");
 			
 			System.out.println("");
-			System.out.println("Borra el estudiante por su ID");
+			System.out.println("Se ha borrado '(2)Javier' mediante su ID");
 			est.deleteById(2);
 			
-			System.out.println("");
-			System.out.println("Lista actualizada");
+			System.out.println("La lista se ha actualizado. Este es su contenido");
 			est.findAll();
 			
 			Estudiante estudiante5= new Estudiante(5, "John","Romero","TAE");
 			
+		
 			est.insert(estudiante5);
-			System.out.println("Nuevo estudiante añadido");
-			
 			System.out.println("");
-			System.out.println("Mostrar estudiante por ID");
+			System.out.println("Añadimos un nuevo estudiante, el cual mostramos mediante su ID");
 			est.read(5);
 			
 			System.out.println("");
@@ -78,6 +73,7 @@ public class PatronDAOEjercicio2 {
 			System.out.println("");
 			System.out.println("Se han borrado todos los registros");
 			est.removeAll();
+			
 			
 			
 			

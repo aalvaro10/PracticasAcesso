@@ -16,9 +16,11 @@ public static void main(String[] args) {
 
 	    
 	            boolean salir = false;
-				int opcion;
+				int opcion,opcion2,opcion3;
 				Scanner sc = new Scanner(System.in);
-				int c;
+				Scanner scc = new Scanner(System.in);
+				
+				int c,i;
 				do {
 					System.out.println("---------------------------------------------");
 					System.out.println("-- Estas son las opciones que puedes hacer --");
@@ -32,10 +34,9 @@ public static void main(String[] args) {
 					switch (opcion) {
 					case 1:
 						try {
-							int opcion2;
-							Scanner scc = new Scanner(System.in);
-							int i;
-							System.out.println("--------------------------------------------------------------------");
+							
+							do{
+								System.out.println("--------------------------------------------------------------------");
 							System.out.println("-- Estas son las opciones de sentencia DDL. Elige una de las tres --");
 							System.out.println("--------------------------------------------------------------------");
 							System.out.println("1- CREATE TABLE");
@@ -43,13 +44,28 @@ public static void main(String[] args) {
 							System.out.println("3- DROP TABLE");
 							System.out.println("");
 							System.out.print("Elige una opcion: ");
-							
 							opcion2= scc.nextInt();
+							
+							switch(opcion2) {
+							case 1:
+								System.out.println("Has cogido la opcion1");
+								break;
+							case 2:
+								System.out.println("Has cogido la opcion1");
+								break;
+							case 3:
+								System.out.println("Has cogido la opcion1");
+								break;
+							}
+							}
+							while (!salir);
+							
+						
 
 						} catch (Exception e) {
 							 e.printStackTrace();
-						}
-
+						} 
+				
 						break;
 					case 2:
 						try {
