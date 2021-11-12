@@ -60,12 +60,12 @@ public class EstudianteDAO implements InterEstudianteDAO {
 		try {
 			Connection conn=Conexion.conectar();
 			Statement st=conn.createStatement();
-			ResultSet rs= st.executeQuery("SELECT * FROM estudiantes WHERE id ='"+id+"'");
-			while (rs.next()) {
+			ResultSet result= st.executeQuery("SELECT * FROM estudiantes WHERE id ='"+id+"'");
+			while (result.next()) {
 				estudiante.setId(id);
-				estudiante.setNombre(rs.getString("nombre"));
-				estudiante.setApellidos(rs.getString("apellido"));
-				estudiante.setModulo(rs.getString("modulo"));
+				estudiante.setNombre(result.getString("nombre"));
+				estudiante.setApellidos(result.getString("apellido"));
+				estudiante.setModulo(result.getString("modulo"));
 			}
 		}	
 		catch (SQLException e) {
@@ -80,17 +80,17 @@ public class EstudianteDAO implements InterEstudianteDAO {
 		try {
 			Connection conn=Conexion.conectar();
 			Statement st=conn.createStatement();
-			ResultSet rs= st.executeQuery("SELECT * FROM estudiantes");
-			while (rs.next()) {
+			ResultSet result= st.executeQuery("SELECT * FROM estudiantes");
+			while (result.next()) {
 				Estudiante estudiante=new Estudiante();
-				estudiante.setId(rs.getInt("id"));
-				estudiante.setNombre(rs.getString("nombre"));
-				estudiante.setApellidos(rs.getString("apellido"));
-				estudiante.setModulo(rs.getString("modulo"));
+				estudiante.setId(result.getInt("id"));
+				estudiante.setNombre(result.getString("nombre"));
+				estudiante.setApellidos(result.getString("apellido"));
+				estudiante.setModulo(result.getString("modulo"));
 				estudiantes.add(estudiante);
 			}
 			st.close();
-			rs.close();
+			result.close();
 			conn.close();
 		} 
 		catch (SQLException e) {
@@ -105,17 +105,17 @@ public class EstudianteDAO implements InterEstudianteDAO {
 		try {
 			Connection conn=Conexion.conectar();
 			Statement st=conn.createStatement();
-			ResultSet rs= st.executeQuery("SELECT * FROM estudiantes WHERE nombre ='"+nombree+"'");
-			while (rs.next()) {
+			ResultSet result= st.executeQuery("SELECT * FROM estudiantes WHERE nombre ='"+nombree+"'");
+			while (result.next()) {
 				Estudiante estudiante=new Estudiante();
-				estudiante.setId(rs.getInt("id"));
-				estudiante.setNombre(rs.getString("nombre"));
-				estudiante.setApellidos(rs.getString("apellido"));
-				estudiante.setModulo(rs.getString("modulo"));
+				estudiante.setId(result.getInt("id"));
+				estudiante.setNombre(result.getString("nombre"));
+				estudiante.setApellidos(result.getString("apellido"));
+				estudiante.setModulo(result.getString("modulo"));
 				estudiantes.add(estudiante);
 			}
 			st.close();
-			rs.close();
+			result.close();
 			conn.close();
 		} 
 		catch (SQLException e) {

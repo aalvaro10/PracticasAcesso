@@ -6,12 +6,12 @@ public class Vista {
 	
 	public void verEstudiante(Estudiante estudiante) {
 		
-		System.out.println("Datos del Estudiante: "+estudiante);
+		System.out.println("Estudiante: "+estudiante);
 	}
 	
 	public void verEstudiantes(List<Estudiante> estudiantes) {
 		for (Estudiante estudiante : estudiantes) {
-			System.out.println("Datos del Estudiante: "+estudiante);
+			System.out.println("Estudiante: "+estudiante);
 		}		
 	}
 }

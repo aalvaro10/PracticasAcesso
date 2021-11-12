@@ -34,6 +34,7 @@ public class Ejercicio2 {
         try {
         	
         	ds.close();
+        	conn.close();
         	
         } catch (Exception e) {
 			 e.printStackTrace();

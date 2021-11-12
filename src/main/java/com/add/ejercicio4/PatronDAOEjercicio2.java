@@ -16,8 +16,8 @@ public class PatronDAOEjercicio2 {
 		
 		ArrayList<Estudiante> Estudiante = new ArrayList();
 		//try {
-		Connection conn = Conexion.conectar();
-		Statement st = conn.createStatement();
+		Connection con = Conexion.conectar();
+		Statement st = con.createStatement();
 		
 		st.execute("DROP TABLE IF EXISTS estudiantes");
 		st.execute("CREATE TABLE IF NOT EXISTS estudiantes("
@@ -50,6 +50,8 @@ public class PatronDAOEjercicio2 {
 			est.update(estudiante2);
 			System.out.println("Modificacion de Javier hecha");
 			est.findByName("Javier");
+			System.out.println("Estos son los estudiantes que hay en la tabla");
+			est.findAll();
 			
 			System.out.println("");
 			System.out.println("Se ha borrado '(2)Javier' mediante su ID");

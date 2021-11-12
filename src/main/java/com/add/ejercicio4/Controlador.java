@@ -39,10 +39,10 @@ private Vista vista= new Vista();
 			vista.verEstudiantes(estudiantes);
 		}
 		
-		public void findByName(String name) {
+		public void findByName(String nombree) {
 			List<Estudiante> estudiantes = new ArrayList<Estudiante>();
 			InterEstudianteDAO dao= new  EstudianteDAO();
-			estudiantes=dao.findByName(name);
+			estudiantes=dao.findByName(nombree);
 			vista.verEstudiantes(estudiantes);
 		}
 		

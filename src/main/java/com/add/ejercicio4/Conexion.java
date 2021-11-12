@@ -7,7 +7,7 @@ public class Conexion {
 	public static Connection conectar() {
 		Connection con = null;
 		
-		String pwd = "root123";
+		String pwd = "elfutbol10";
 		String user = "root";
 		String url = "jdbc:mysql://localhost:3306/aadu2?user=" + user+ "&password=" + pwd;
 		try {
@@ -19,6 +19,7 @@ public class Conexion {
 			e.printStackTrace();
 		}
 		return con;
+		
 	}
 
 }

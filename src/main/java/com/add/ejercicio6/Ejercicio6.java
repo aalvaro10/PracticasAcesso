@@ -7,7 +7,7 @@ import java.sql.Connection;
 public class Ejercicio6 {
 	
 	public static void main(String args[]) {
-	    //Conectar
+
       Connection c = null;
       try {
 
