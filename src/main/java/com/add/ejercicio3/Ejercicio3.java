@@ -18,10 +18,10 @@ public class Ejercicio3 {
 	    String parAdic = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	    String urlConnection = "jdbc:mysql://" + host + ":" + port + "/" + basedatos + parAdic;
 	    String user = "root";
-	    String pwd = "root123";
+	    String pasword = "root123";
 
 	    try {
-	            Connection conn = DriverManager.getConnection(urlConnection, user, pwd);
+	            Connection conn = DriverManager.getConnection(urlConnection, user, pasword);
 	            Statement st = conn.createStatement();
 	            
 	            st.execute("DROP TABLE IF EXISTS usuarios;");

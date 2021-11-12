@@ -68,7 +68,9 @@ public static void main(String[] args) {
 										+ "apellidos varchar(50),"
 										+ "goles varchar(50),"
 										+ "PRIMARY KEY (id));");
+								System.out.println("---------------------------------");
 								System.out.println("La tabla jugadores ha sido creada");
+								System.out.println("---------------------------------");
 								
 								st.executeUpdate("INSERT INTO jugadores (id,nombre,apellidos,goles) VALUES "
 							              + "('1','Alvaro','Gomez','3 goles'),"
@@ -79,6 +81,15 @@ public static void main(String[] args) {
 								
 								ResultSet rs = st.executeQuery("SELECT * FROM jugadores");
 								
+								int a=1;
+							      while (rs.next()) {
+							        System.out.println("[" + (a++) + "]");        
+							        System.out.println("id: " + rs.getString("id"));
+							        System.out.println("nombre: " + rs.getString("nombre"));
+							        System.out.println("apellidos: " + rs.getString("apellidos"));
+							        System.out.println("goles: " + rs.getString("goles"));
+							      }
+								
 								Statement stt = conn.createStatement();
 								stt.execute("DROP TABLE IF EXISTS equipo");
 								stt.execute("CREATE TABLE IF NOT EXISTS equipo("
@@ -87,7 +98,9 @@ public static void main(String[] args) {
 										+ "abreviacion varchar(50),"
 										+ "pts int,"
 										+ "PRIMARY KEY (id));");
+								System.out.println("------------------------------");
 								System.out.println("La tabla equipo ha sido creada");
+								System.out.println("------------------------------");
 								System.out.println("");
 								
 								stt.executeUpdate("INSERT INTO equipo (id,nombre_equipo,abreviacion,pts) VALUES "
@@ -98,6 +111,14 @@ public static void main(String[] args) {
 							              + "('5','Real Valladolid','Valladolid','12');");
 								
 								ResultSet rss = st.executeQuery("SELECT * FROM equipo");
+								int b=1;
+							      while (rss.next()) {
+							        System.out.println("[" + (b++) + "]");        
+							        System.out.println("id: " + rss.getString("id"));
+							        System.out.println("nombre_equipo: " + rss.getString("nombre_equipo"));
+							        System.out.println("abreviacion: " + rss.getString("abreviacion"));
+							        System.out.println("pts: " + rss.getString("pts"));
+							      }
 								conn.close();
 								break;
 							case 2:
@@ -146,6 +167,9 @@ public static void main(String[] args) {
 						break;
 						
 					case 3:
+						System.out.println("Has elegido eliminar todos los datos almacenados.");
+						Connection conn4 = Conexion.conectar();
+						
 						break;
 						
 					case 4:
