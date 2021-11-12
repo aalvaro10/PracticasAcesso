@@ -25,7 +25,7 @@ public class Ejercicio2 {
 		BasicDataSource ds = new BasicDataSource();
         ds.setUrl("jdbc:mysql://localhost/test");
         ds.setUsername("root");
-        ds.setPassword("elfutbol10");
+        ds.setPassword("root123");
 
 
         ds.setMinIdle(5);

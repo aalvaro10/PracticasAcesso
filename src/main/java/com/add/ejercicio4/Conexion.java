@@ -7,15 +7,14 @@ public class Conexion {
 	public static Connection conectar() {
 		Connection con = null;
 		
-		String password = "elfutbol10";
-		String usuario = "root";
-		String url = "jdbc:mysql://localhost:3306/aadu2?user=" + usuario+ "&password=" + password;
+		String pwd = "root123";
+		String user = "root";
+		String url = "jdbc:mysql://localhost:3306/aadu2?user=" + user+ "&password=" + pwd;
 		try {
-			con = DriverManager.getConnection(url);
-			if (con != null) {
-				System.out.println("Conectado");
+			con = DriverManager.getConnection(url, user, pwd);
+		
 			}
-		} catch (SQLException e) {
+		catch (SQLException e) {
 			System.out.println("No se pudo conectar a la base de datos");
 			e.printStackTrace();
 		}
